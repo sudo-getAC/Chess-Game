@@ -31,7 +31,10 @@ public class Time
     {
     	countdownTimer.start();
     }
-    
+    public void stop()
+    {
+    	countdownTimer.stop();
+    }
     //A function that resets the timer
     public void reset()
     {
@@ -56,7 +59,8 @@ public class Time
                label.setText("Time's up!");
                reset();
                start();
-               Main.Mainboard.changechance();
+               Main.Mainboard.chance^=1;
+               Main.Mainboard.gameend();
 		 }
     }
  }
